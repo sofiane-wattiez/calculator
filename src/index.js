@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
+import TheTitle from './TheTitle.js';
+import AmazingNumberButton from './AmazingNumberButton';
+import BeautifullScreen from './BeautifullScreen';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <TheTitle />
+    <BeautifullScreen />
+    <AmazingNumberButton />
   </React.StrictMode>,
   document.getElementById('root')
 );

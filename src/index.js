@@ -5,7 +5,7 @@ import Calculator from './Calculator';
 
 ReactDOM.render(
 
-  <Calculator></Calculator>,
+  <Calculator />,
 
 
   document.getElementById('root')

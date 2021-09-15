@@ -11,36 +11,35 @@ import MagnificientEqualButton from './MagnificientEqualButton';
 
 function Calculator() {
 
+    const [ScreenView, setScreenView] = useState(''); // useState sert a récuperer un état 
+
     // const [calc, setCalc] = useState("");
     // const [result, setResult] = useState("");
     // const ops = ['/', '*', '+', '-', '.'];
+    function handleClick(e) {
+        e.preventDefault();
+        console.log(e.target.value);
+        const event = e.target.value
+
+        setScreenView(event)
+
+    }
 
     return (
         <section className="Calculator">
-            <div className="TheTitle">
-                <TheTitle />
-            </div>
-            <div className="BeautifullScreen">
-                <BeautifullScreen name="" />
-            </div>
-            <div className="GreatOperationButton">
-                <GreatOperationButton name="" />
-            </div>
-            <div className="AmazingNumberButton">
-                <AmazingNumberButton name="1" />
-                <AmazingNumberButton name="2" />
-                <AmazingNumberButton name="3" />
-                <AmazingNumberButton name="4" />
-                <AmazingNumberButton name="5" />
-                <AmazingNumberButton name="6" />
-                <AmazingNumberButton name="7" />
-                <AmazingNumberButton name="8" />
-                <AmazingNumberButton name="9" />
-            </div>
-            <div className="MagnificientEqualButton">
-                <MagnificientEqualButton name="=" />
-            </div>
-        </section>
+
+            <TheTitle />
+
+            <BeautifullScreen number="0" ScreenView={ScreenView} />
+
+            <GreatOperationButton name="+" />
+
+            <AmazingNumberButton name="" />
+
+
+            <MagnificientEqualButton name="" />
+
+        </section >
 
 
     );

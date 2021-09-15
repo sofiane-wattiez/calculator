@@ -38,7 +38,6 @@ function AmazingNumberButton() {
     }
 
 
-
     return (
         <div className="digits">
             {createDigits()}

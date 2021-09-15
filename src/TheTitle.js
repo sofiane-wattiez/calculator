@@ -1,9 +1,8 @@
-// import logo from './logo.svg';
-import './TheTitle.css';
+
 
 function TheTitle() {
     return (
-        <h1>Calculator 9000</h1>
+        <h1 className="Title">Calculator 9000</h1>
     );
 }
 

@@ -13,6 +13,7 @@ function Calculator() {
 
     const [ScreenView, setScreenView] = useState(''); // useState sert a récuperer un état 
 
+    const [result, setResult] = useState("");
     // const [calc, setCalc] = useState("");
     // const [result, setResult] = useState("");
     // const ops = ['/', '*', '+', '-', '.'];
@@ -28,16 +29,16 @@ function Calculator() {
     return (
         <section className="Calculator">
 
-            <TheTitle />
+            <TheTitle name="" />
 
-            <BeautifullScreen number="0" ScreenView={ScreenView} />
+            <BeautifullScreen number="" ScreenView={ScreenView} />
 
-            <GreatOperationButton name="+" />
+            <GreatOperationButton name="" handleClick={handleClick} />
 
-            <AmazingNumberButton name="" />
+            <AmazingNumberButton name="" handleClick={handleClick} />
 
 
-            <MagnificientEqualButton name="" />
+            <MagnificientEqualButton name="" handleClick={handleClick} />
 
         </section >
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 function BeautifullScreen() {
+
     const [calc, setCalc] = useState("");
     const [result, setResult] = useState("");
     const ops = ['/', '*', '+', '-', '.'];
@@ -17,11 +18,12 @@ function BeautifullScreen() {
 
     }
 
-    return (<div className="display">
-        {result ? <span>({result})</span> : ''}
-        &nbsp;
-        {calc || "0"}
-    </div>
+    return (
+        <div className="display">
+            {result ? <span>({result})</span> : ''}
+            &nbsp;
+            {calc || "0"}
+        </div>
     );
 
 }

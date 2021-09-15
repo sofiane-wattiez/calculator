@@ -6,9 +6,10 @@ function MagnificientEqualButton() {
     const [result, setResult] = useState("");
 
     const [calc, setCalc] = useState("");
-    // const [updateCalc, setUpdate];
+    const [updateCalc, setUpdate] = useState('');
 
     const ops = ['/', '*', '+', '-', '.'];
+
     const updateCalc = value => {
         if (
             ops.includes(value) && calc === '' ||
@@ -22,24 +23,19 @@ function MagnificientEqualButton() {
             setResult(eval(calc + value).toString());
 
         }
-    }
-    const calculate = () => {
-        // || '+' || '-' || '*' || '/'
-        if (calc === '') {
-            return;
+        const calculate = () => {
+            // || '+' || '-' || '*' || '/'
+            if (calc === '') {
+                return;
+            }
+            const value = calc.slice(0);
+            setCalc(value);
+            setCalc(eval(calc).toString());
+
+
         }
-        const value = calc.slice(0);
-        setCalc(value);
-        setCalc(eval(calc).toString());
-
-
     }
-
-
-
-
     return (<button onClick={result}>=</button>);
-
 }
 
 export default MagnificientEqualButton;

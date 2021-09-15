@@ -38,14 +38,14 @@ function AmazingNumberButton() {
     }
 
 
-    return (
-        <div className="digits">
-            {createDigits()}
-            <button onClick={() => updateCalc('0')}>0</button>
-            <button onClick={() => updateCalc('.')}>.</button>
-            <button onClick={result}>=</button>
-        </div>
-    );
-}
+    // return (
+    //     <div className="digits">
+    //         {createDigits()}
+    //         <button onClick={() => updateCalc('0')}>0</button>
+    //         <button onClick={() => updateCalc('.')}>.</button>
 
+    //     </div>
+    // );
+
+}
 export default AmazingNumberButton;

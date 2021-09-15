@@ -6,7 +6,7 @@ function MagnificientEqualButton() {
     const [result, setResult] = useState("");
 
     const [calc, setCalc] = useState("");
-    const [updateCalc, setUpdate] = useState('');
+    // const [updateCalc, setUpdate] = useState('');
 
     const ops = ['/', '*', '+', '-', '.'];
 

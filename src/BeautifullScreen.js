@@ -18,6 +18,7 @@ function BeautifullScreen() {
 
     }
 
+
     return (
         <div className="display">
             {result ? <span>({result})</span> : ''}

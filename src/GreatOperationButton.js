@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+// import Calculator from './Calculator';
+
 
 
 function GreatOperationButton() {
@@ -6,14 +8,6 @@ function GreatOperationButton() {
     const [calc, setCalc] = useState("");
     const [result, setResult] = useState("");
     const ops = ['/', '*', '+', '-', '.'];
-
-    const deleteLast = () => {
-        if (calc === "") {
-            return;
-        }
-        const value = calc.slice(0, -1);
-        setCalc(value);
-    }
 
     const updateCalc = value => {
         if (
@@ -29,6 +23,16 @@ function GreatOperationButton() {
 
         }
     }
+
+    const deleteLast = () => {
+        if (calc === "") {
+            return;
+        }
+        const value = calc.slice(0, -1);
+        setCalc(value);
+    }
+
+
     return (
         <div className="GreatOperationButton">
             <button onClick={() => updateCalc('/')}>/</button>

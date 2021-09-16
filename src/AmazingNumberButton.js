@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+// import MagnificientEqualButton from './MagnificientEqualButton';
 
 function AmazingNumberButton() {
 
@@ -21,6 +22,7 @@ function AmazingNumberButton() {
 
         }
     }
+
     const createDigits = () => {
         const digits = [];
 
@@ -39,7 +41,7 @@ function AmazingNumberButton() {
 
 
     return (
-        <div className="digits">
+        <div >
             {createDigits()}
             <button onClick={() => { updateCalc('0') }}>0</button>
             <button onClick={() => updateCalc('.')}>.</button>

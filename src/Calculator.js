@@ -1,84 +1,59 @@
 import React, { useState } from 'react';
 
-import TheTitle from './TheTitle';
-import AmazingNumberButton from './AmazingNumberButton';
-import BeautifullScreen from './BeautifullScreen';
-import GreatOperationButton from './GreatOperationButton';
-import MagnificientEqualButton from './MagnificientEqualButton';
+import TheTitle from './component/TheTitle';
+import AmazingNumberButton from './component/AmazingNumberButton';
+import BeautifullScreen from './component/BeautifullScreen';
+import GreatOperationButton from './component/GreatOperationButton';
+import MagnificientEqualButton from './component/MagnificientEqualButton';
 
 
 
 
 function Calculator() {
 
-    // useState sert a récuperer un état 
-    // const [result, setResult] = useState("");
+
+    const [value, setValue] = useState(""); // useState c'est global
     const [calc, setCalc] = useState("");
     const [result, setResult] = useState("");
-    const ops = ['/', '*', '+', '-', '.'];
+    // const ops = ['/', '*', '+', '-', '.'];
+
+    // Créer une fonction pour le résultat + 
+    // une fonction pour l'affichage + une pour reset
 
 
-    const [number, setNumber] = useState(''); // useState c'est global
-
-
-    function handleClick(e) {
-        console.log(e.target.value);
-        const event = e.target.value
-
-        setNumber(event)
+    const handleClick = (e) => {
+        // console.log(e.target.value);
+        setValue(calc.concat(e.target.value));
 
     }
 
-    const updateCalc = value => {
-        if (
-            ops.includes(value) && calc === '' ||
-            ops.includes(value) && ops.includes(calc.slice(-1))
-        ) {
-            return;
-        }
-
-        setCalc(calc + value);
-        if (!ops.includes(value)) {
-            setResult(eval(calc + value).toString());
-
-        }
-    }
-
-
-    const calculate = () => {
-        // || '+' || '-' || '*' || '/'
-        if (calc === '') {
-            return;
-        }
-        const value = calc.slice(0);
-        setCalc(value);
-        setCalc(eval(calc).toString());
-
-
-    }
-
-    const deleteLast = () => {
-        if (calc === "") {
-            return;
-        }
-        const value = calc.slice(0, -1);
-        setCalc(value);
-    }
-
-
-
+    const
 
     return (
         <section className="Calculator">
 
-            <TheTitle name="" />
+            <TheTitle value="Calculator9000" />
 
-            <BeautifullScreen number="0" onClick={number} />
+            <BeautifullScreen value={value} />
 
-            <GreatOperationButton name="" onClick={handleClick} />
+            <GreatOperationButton value={"/"} handleClick={handleClick} />
+            <GreatOperationButton value={"*"} handleClick={handleClick} />
+            <GreatOperationButton value={"+"} handleClick={handleClick} />
+            <GreatOperationButton value={"-"} handleClick={handleClick} />
+            <GreatOperationButton value={"C"} handleClick={handleClick} />
             <div className="digits">
-                <AmazingNumberButton name="" onClick={handleClick} />
-                <MagnificientEqualButton name="" onClick={handleClick} />
+                <AmazingNumberButton value={"0"} handleClick={handleClick} />
+                <AmazingNumberButton value={"1"} handleClick={handleClick} />
+                <AmazingNumberButton value={"2"} handleClick={handleClick} />
+                <AmazingNumberButton value={"3"} handleClick={handleClick} />
+                <AmazingNumberButton value={"4"} handleClick={handleClick} />
+                <AmazingNumberButton value={"5"} handleClick={handleClick} />
+                <AmazingNumberButton value={"6"} handleClick={handleClick} />
+                <AmazingNumberButton value={"7"} handleClick={handleClick} />
+                <AmazingNumberButton value={"8"} handleClick={handleClick} />
+                <AmazingNumberButton value={"9"} handleClick={handleClick} />
+
+                <MagnificientEqualButton value={"="} handleClick={handleClick} />
             </div>
 
 

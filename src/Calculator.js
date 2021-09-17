@@ -15,6 +15,7 @@ function Calculator() {
     // useState c'est un état global à définir
     const [value, setValue] = useState("");
     const [calc, setCalc] = useState("");
+    const [its, setOver] = useState("")
     // const [over, over9000] = useState("");
 
 
@@ -49,7 +50,7 @@ function Calculator() {
         <section className="Calculator">
 
             <TheTitle value="Calculator9000" />
-
+            {/* <ItsOver9000 /> */}
             <BeautifullScreen value={value} calc={calc} />
 
             <div className="digits">

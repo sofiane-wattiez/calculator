@@ -25,13 +25,14 @@ body {
 .Calculator
 {
   width: 100%;
-  max-width: 400px;
+  max-width: 420px;
+  /* max-height: 1000px; */
   background-color: #FFF;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0px 2px 64px rgba(0, 0, 0,0.2);
 }
-.BeautifulScreen{
+.BeautifullScreen{
   padding: 16px;
   text-align: right;
   background-color: var(--dark);
@@ -40,10 +41,7 @@ body {
   font-weight: 300;
   height: 10%;
 }
-.BeautifulScreen span{
-  font-size: 14px;
-  color: #888;
-}
+
 button{
   appearance: none;
   border: none;
@@ -58,26 +56,30 @@ button:hover{
   opacity: 0.9;
 }
 .GreatOperationButton {
-  display: flex;
+ display: flex;
 }
 .GreatOperationButton button{
   flex: 1 1 0%;
   background-color: var(--primary);
   font-weight: 700;
 }
-.digits{
+/* .digits{
   display: flex;
-  flex-wrap: wrap;
-  flex: 1 1 33.333%;
-  max-width: 33.333%;
-  background-color: var(--dark);
-}
-.digits button{
-  flex: 1 1 33.333%;
-  max-width: 33.333%; 
-  background-color: var(--dark);
+  /* flex-wrap: wrap;  */
+   /* flex: 1 1 33.333%;  */
+   /* max-width: 100%;  */
+   /* height: 100%; */
+  /* background-color: var(--secondary); */
+/* } */ 
+/* .digits button{
+  flex: 1 1 33.333%; 
+   max-width: 33.333%; 
+  background-color: var(--secondary);
 }
 h1{
-  text-align: center;
-  background-color: #535353;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+h1 , h2 ,h3{
+  text-align: center;
+  background-color: var(--secondary);
+} */

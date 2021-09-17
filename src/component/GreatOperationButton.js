@@ -10,10 +10,10 @@ function GreatOperationButton(props) {
 
 
     return (
-        <div className="GreatOperationButton">
-            <button onClick={() => props.handleClick(props.value)}>{props.value}</button>
 
-        </div>
+        <button onClick={() => props.handleClick(props.value)}>{props.value}</button>
+
+
     );
 }
 

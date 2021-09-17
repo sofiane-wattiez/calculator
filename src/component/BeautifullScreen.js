@@ -11,7 +11,7 @@ function BeautifullScreen(props) {
 
 
     return (
-        <div className="BeatifullScreen">
+        <div className="BeautifullScreen">
             <h2 >{props.value}</h2>
             {/* {calc ? <span>({calc})</span> : ''} */}
 

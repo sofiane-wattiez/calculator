@@ -52,13 +52,8 @@ function Calculator() {
 
             <BeautifullScreen value={value} calc={calc} />
 
-            <GreatOperationButton value="/" handleClick={handleClick} />
-            <GreatOperationButton value="*" handleClick={handleClick} />
-            <GreatOperationButton value="+" handleClick={handleClick} />
-            <GreatOperationButton value="-" handleClick={handleClick} />
-            <GreatOperationButton value="DEL" handleClick={deleteAll} />
             <div className="digits">
-                <AmazingNumberButton value="0" handleClick={handleClick} />
+
                 <AmazingNumberButton value="1" handleClick={handleClick} />
                 <AmazingNumberButton value="2" handleClick={handleClick} />
                 <AmazingNumberButton value="3" handleClick={handleClick} />
@@ -68,8 +63,22 @@ function Calculator() {
                 <AmazingNumberButton value="7" handleClick={handleClick} />
                 <AmazingNumberButton value="8" handleClick={handleClick} />
                 <AmazingNumberButton value="9" handleClick={handleClick} />
+                <AmazingNumberButton value="." handleClick={handleClick} />
+                <AmazingNumberButton value="0" handleClick={handleClick} />
 
+
+
+
+            </div>
+            <div className="GreatOperationButton">
+                <GreatOperationButton value="/" handleClick={handleClick} />
+                <GreatOperationButton value="*" handleClick={handleClick} />
+                <GreatOperationButton value="+" handleClick={handleClick} />
+                <GreatOperationButton value="-" handleClick={handleClick} />
+
+                <GreatOperationButton value="DEL" handleClick={deleteAll} />
                 <MagnificientEqualButton value="=" handleClick={calculate} />
+
             </div>
 
 

@@ -38,6 +38,7 @@ body {
   color: var(--light);
   font-size: 24px ;
   font-weight: 300;
+  height: 10%;
 }
 .BeautifulScreen span{
   font-size: 14px;

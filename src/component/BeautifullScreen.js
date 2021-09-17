@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 // import Calculator from './Calculator';
 
 function BeautifullScreen(props) {
@@ -14,8 +14,8 @@ function BeautifullScreen(props) {
         <div className="BeatifullScreen">
             <h2 value={props.value}>{props.value}</h2>
             {/* {value ? <span>({value})</span> : ''}
-            &nbsp;
-            {calc || "0"} */}
+            &nbsp; */}
+            <h3>{props.calc || "0"}</h3>
         </div>
     );
 

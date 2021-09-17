@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import * as math from 'mathjs';
 
 import TheTitle from './component/TheTitle';
@@ -15,7 +15,7 @@ function Calculator() {
     // useState c'est un état global à définir
     const [value, setValue] = useState("");
     const [calc, setCalc] = useState("");
-    const [its, setOver] = useState("")
+    const [over, setOver] = useState("")
     // const [over, over9000] = useState("");
 
 
@@ -45,6 +45,9 @@ function Calculator() {
         setValue("");
         setCalc("");
     }
+
+
+
 
     return (
         <section className="Calculator">
@@ -88,8 +91,8 @@ function Calculator() {
 
     );
 
-}
 
+}
 
 
 export default Calculator;

@@ -11,7 +11,7 @@ function GreatOperationButton(props) {
 
     return (
 
-        <button onClick={() => props.handleClick(props.value)}>{props.value}</button>
+        <button id="ope" onClick={() => props.handleClick(props.value)}>{props.value}</button>
 
 
     );

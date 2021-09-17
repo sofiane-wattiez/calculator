@@ -56,7 +56,7 @@ function Calculator() {
             {/* <ItsOver9000 /> */}
             <BeautifullScreen value={value} calc={calc} />
 
-            <div className="digits">
+            <div className="Operation">
 
                 <AmazingNumberButton value="1" handleClick={handleClick} />
                 <AmazingNumberButton value="2" handleClick={handleClick} />
@@ -74,7 +74,7 @@ function Calculator() {
 
 
             </div>
-            <div className="GreatOperationButton">
+            <div className="Number">
                 <GreatOperationButton value="/" handleClick={handleClick} />
                 <GreatOperationButton value="*" handleClick={handleClick} />
                 <GreatOperationButton value="+" handleClick={handleClick} />

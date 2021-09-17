@@ -12,14 +12,12 @@ import MagnificientEqualButton from './component/MagnificientEqualButton';
 
 function Calculator() {
 
-
-    const [value, setValue] = useState("0"); // useState c'est global
+    // useState c'est un état global à définir
+    const [value, setValue] = useState("");
     const [calc, setCalc] = useState("");
-    // const [result, setResult] = useState("");
-    // const ops = ['/', '*', '+', '-', '.'];
+    // const [over, over9000] = useState("");
 
-    // Créer une fonction pour le résultat + 
-    // une fonction pour l'affichage + une pour reset
+
 
 
     const handleClick = (e) => {
@@ -32,37 +30,20 @@ function Calculator() {
 
 
     const calculate = () => {
-        // || '+' || '-' || '*' || '/'
-        // let lastValue = value.slice(-1);
-        // if{
-        //     (isNaN(lastValue)) {
-        //     return;
-        // } else {
-        const calc = value.join(""); // remove Last value
-        setCalc(math.evaluate(calc));
+        let lastValue = value.slice(-1);
+        if (isNaN(lastValue)) {
+            return;
+        } else {
+            const calc = value.join(""); // remove Last value
+            setCalc(math.evaluate(calc));
+        }
+
     }
 
-
-    // / evaluate and set the operation result
-    // const calculateResult = () => {
-    //     let lastInText = text.slice(-1);
-    //     if (isNaN(lastInText)) {
-    //         return;
-    //     } else {
-    //         const input = text.join(""); // remove commas 
-    //         setResult(math.evaluate(input));
-    //     };
-    // };
-
-    // const deleteLast = () => {
-    //     if (calc === "") {
-    //         return;
-    //     }
-    //     const value = calc.slice(0, -1);
-    //     setCalc(value);
-    // }
-
-
+    const deleteAll = () => {
+        setValue("");
+        setCalc("");
+    }
 
     return (
         <section className="Calculator">
@@ -75,7 +56,7 @@ function Calculator() {
             <GreatOperationButton value="*" handleClick={handleClick} />
             <GreatOperationButton value="+" handleClick={handleClick} />
             <GreatOperationButton value="-" handleClick={handleClick} />
-            <GreatOperationButton value="C" handleClick={handleClick} />
+            <GreatOperationButton value="DEL" handleClick={deleteAll} />
             <div className="digits">
                 <AmazingNumberButton value="0" handleClick={handleClick} />
                 <AmazingNumberButton value="1" handleClick={handleClick} />

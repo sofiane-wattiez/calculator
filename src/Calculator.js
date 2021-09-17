@@ -13,7 +13,7 @@ import MagnificientEqualButton from './component/MagnificientEqualButton';
 function Calculator() {
 
 
-    const [value, setValue] = useState(""); // useState c'est global
+    const [value, setValue] = useState("0"); // useState c'est global
     const [calc, setCalc] = useState("");
     // const [result, setResult] = useState("");
     // const ops = ['/', '*', '+', '-', '.'];
@@ -33,16 +33,26 @@ function Calculator() {
 
     const calculate = () => {
         // || '+' || '-' || '*' || '/'
-        if (calc === '') {
-            return;
-        }
-        const calc = calc.slice(0);
-        setCalc(calc);
+        // let lastValue = value.slice(-1);
+        // if{
+        //     (isNaN(lastValue)) {
+        //     return;
+        // } else {
+        const calc = value.join(""); // remove Last value
         setCalc(math.evaluate(calc));
-
-
-
     }
+
+
+    // / evaluate and set the operation result
+    // const calculateResult = () => {
+    //     let lastInText = text.slice(-1);
+    //     if (isNaN(lastInText)) {
+    //         return;
+    //     } else {
+    //         const input = text.join(""); // remove commas 
+    //         setResult(math.evaluate(input));
+    //     };
+    // };
 
     // const deleteLast = () => {
     //     if (calc === "") {
@@ -59,7 +69,7 @@ function Calculator() {
 
             <TheTitle value="Calculator9000" />
 
-            <BeautifullScreen value={value} />
+            <BeautifullScreen value={value} calc={calc} />
 
             <GreatOperationButton value="/" handleClick={handleClick} />
             <GreatOperationButton value="*" handleClick={handleClick} />

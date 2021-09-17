@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 
 function BeautifullScreen(props) {
     // const [result, setResult] = useState(''); // useState c'est global
-    const [calc, setCalc] = useState(''); // useState c'est global
-    const [value, setValue] = useState('')
+    // const [calc, setCalc] = useState(''); // useState c'est global
+    // const [value, setValue] = useState('')
 
 
 
@@ -12,11 +12,11 @@ function BeautifullScreen(props) {
 
     return (
         <div className="BeatifullScreen">
-            <h2 value={props.value}>{props.value}</h2>
-            {/* {value ? <span>({value})</span> : ''}
-            &nbsp; */}
-            <h3>{props.calc || "0"}</h3>
-        </div>
+            <h2 >{props.value}</h2>
+            {/* {calc ? <span>({calc})</span> : ''} */}
+
+            <h3>{props.calc}</h3>
+        </div >
     );
 
 }

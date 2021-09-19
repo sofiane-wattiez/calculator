@@ -41,6 +41,17 @@ function Calculator() {
 
     }
 
+    // const ItsOver9000 = () => {
+    //     if{
+    //         const over = (">= 9000");
+
+    //     }
+    //     return (
+    //             <p>It's Over 9000</p>
+    //         );
+
+    // }
+
     const deleteAll = () => {
         setValue("");
         setCalc("");

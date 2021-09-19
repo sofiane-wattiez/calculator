@@ -16,8 +16,7 @@ body{
   border: 1px solid #310202;
   border-radius: 1%;
   width: 50%;
-  /* height: -6%; */
-  /* box-shadow: ; */
+ padding: 5%;
   align-content: center;
   justify-content: center;
   align-items: center;
@@ -39,6 +38,7 @@ body{
 /* container */
 .input {
   font-size: var(--font-screen-size);
+  text-align: center;
   border: 2px SOLID #0000007a;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -67,6 +67,7 @@ button:active{
   letter-spacing: 3px;
   padding-right: 30px;
   height: 50px;
+  padding: 5%;
   background: rgb(108,108,108);
   background: linear-gradient(348deg, rgba(108,108,108,1) 0%, rgba(184,183,183,1) 4%, rgba(255,255,255,1) 75%, rgba(255,255,255,1) 89%, rgba(158,158,158,1) 99%);
   flex-wrap: nowrap;
@@ -200,4 +201,7 @@ p{
 #equal:active {
   background: #0077ff;
   box-shadow: 0px 0px 54px 32px #1855ff, 3px 4px 6px 2px #1a3173, inset 0px 0px 9px 9px #cecece;
+}
+h2 ,h3{
+  text-align: center;
 }

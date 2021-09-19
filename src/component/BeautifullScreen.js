@@ -13,7 +13,6 @@ function BeautifullScreen(props) {
     return (
         <div className="input">
             <h2 >{props.value}</h2>
-            {/* {calc ? <span>({calc})</span> : ''} */}
 
             <h3>{props.calc}</h3>
         </div >
